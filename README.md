@@ -1,46 +1,121 @@
-# Getting Started with Create React App
+# Sistema de Agendamento de Consultas Médicas
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/downloads/release/python-390/)
+[![Django](https://img.shields.io/badge/django-4.2%2B-green.svg)](https://www.djangoproject.com/)
+[![React](https://img.shields.io/badge/react-18%2B-blue.svg)](https://reactjs.org/)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE.md)
 
-## Available Scripts
+Um sistema completo para agendamento de consultas médicas, permitindo que pacientes e médicos se cadastrem na plataforma, visualizem disponibilidades e gerenciem consultas.
 
-In the project directory, you can run:
+## Funcionalidades
 
-### `npm start`
+- **Autenticação e Registro**
+  - Cadastro de pacientes e médicos
+  - Login seguro com JWT
+  - Recuperação de senha
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Agendamento de Consultas**
+  - Visualização de disponibilidade dos médicos
+  - Agendamento de consultas
+  - Confirmação e cancelamento de consultas
+  - Histórico de consultas
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **Dashboard Personalizado**
+  - Interface específica para pacientes
+  - Interface específica para médicos
+  - Visualização de agenda
+  - Gerenciamento de consultas
 
-### `npm test`
+- **Notificações**
+  - E-mails de confirmação
+  - Lembretes de consultas
+  - Notificações de alterações
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tecnologias Utilizadas
 
-### `npm run build`
+### Backend
+- Python 3.9+
+- Django 4.2+
+- Django REST Framework
+- PostgreSQL
+- JWT Authentication
+- Celery (para tarefas assíncronas)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Frontend
+- React 18+
+- Material-UI
+- Redux Toolkit
+- React Router
+- Axios
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Instalação
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Backend
 
-### `npm run eject`
+1. Clone o repositório:
+```bash
+git clone https://github.com/erionmaia/sistema-consultas.git
+cd sistema-consultas/consultas_backend
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. Crie e ative um ambiente virtual:
+```bash
+python3 -m venv venv
+source venv/bin/activate  # No Windows: venv\Scripts\activate
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Instale as dependências:
+```bash
+pip install -r requirements.txt
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+4. Configure o banco de dados:
+```bash
+python3 manage.py migrate
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+5. Inicie o servidor:
+```bash
+python3 manage.py runserver
+```
 
-## Learn More
+### Frontend
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Navegue até a pasta do frontend:
+```bash
+cd ../consultas_frontend
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Instale as dependências:
+```bash
+npm install
+```
+
+3. Inicie o servidor de desenvolvimento:
+```bash
+npm start
+```
+
+## 📝 Uso
+
+1. Acesse `http://localhost:3000` no seu navegador
+2. Crie uma conta como paciente ou médico
+3. Faça login e comece a usar o sistema
+
+## 🤝 Contribuindo
+
+1. Fork o projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
+
+## 📄 Licença
+
+Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE.md](LICENSE.md) para detalhes.
+
+## 📧 Contato
+
+Erion Schlenger - [erionmaia@gmail.com](mailto:erionmaia@gmail.com)
+
+Link do Projeto: [https://github.com/erionmaia/sistema-consultas](https://github.com/erionmaia/sistema-consultas) 
